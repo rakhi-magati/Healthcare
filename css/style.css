@@ -73,6 +73,7 @@
   background-color: transparent;
   width: 252px;
   height:50px;
+  object-fit: contain;
 }
 
 /* --- Base & Reset --- */
@@ -2034,8 +2035,15 @@ h1, h2, h3, h4, h5, h6 {
   .header-actions .btn-primary {
     display: none;
   }
+  .auth-nav {
+    display: none;
+  }
   .mobile-toggle {
     display: flex;
+  }
+  .logo {
+    width: 200px;
+    height: 42px;
   }
   .hero-title {
     font-size: 2.5rem;

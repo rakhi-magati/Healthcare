@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find a Doctor at AuraCare Health - Search and filter our directory of board-certified medical specialists, check availability, view credentials, and schedule appointments.">
+  <title>Doctor's Directory | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>500 Wellness Way, Medical District, NY</span>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">24/7 Rapid Emergency Care</span>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <strong style="color: #ffffff;">+1 (800) 555-CARE</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+
+      <!-- 6 Main Navigation Tabs -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link active">Doctor's</a>
+        <a href="appointments.html" class="nav-link">Appointments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Auth State & CTA Button -->
+      <div class="header-actions">
+        <div class="auth-nav">
+          <!-- Populated dynamically by main.js (Login/Register or User Profile/Dashboard) -->
+          <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+          <a href="register.html" class="btn btn-secondary btn-sm">Register</a>
+        </div>
+        <a href="appointments.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNavDrawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link active">Doctor's</a>
+      <a href="appointments.html" class="nav-link">Appointments</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-nav-actions">
+        <a href="appointments.html" class="btn btn-primary btn-sm" style="width: 100%;">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Find a Doctor</span>
+      </div>
+      <h1 class="page-hero-title">Meet Our Medical Specialists</h1>
+      <p class="page-hero-desc">Discover experienced clinicians committed to personalized diagnostic care. Search by specialty or physician name to book your visit.</p>
+    </div>
+  </section>
+
+  <!-- Doctor Directory Section -->
+  <main class="section">
+    <div class="container">
+      <!-- Search & Specialty Filter Controls -->
+      <div class="filter-bar reveal">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="doctorSearchInput" placeholder="Search doctor name, specialty, or credentials..." aria-label="Search doctor by name or specialty">
+        </div>
+
+        <div class="filter-pills" id="specialtyFilterPills">
+          <button type="button" class="filter-pill active" data-specialty="all">All Specialties</button>
+          <button type="button" class="filter-pill" data-specialty="Cardiology">Cardiology</button>
+          <button type="button" class="filter-pill" data-specialty="General Medicine">General Medicine</button>
+          <button type="button" class="filter-pill" data-specialty="Pediatrics">Pediatrics</button>
+          <button type="button" class="filter-pill" data-specialty="Orthopedics">Orthopedics</button>
+          <button type="button" class="filter-pill" data-specialty="Dermatology">Dermatology</button>
+          <button type="button" class="filter-pill" data-specialty="Dentistry">Dentistry</button>
+        </div>
+      </div>
+
+      <!-- Results Count Status -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span id="doctorResultsCount" style="font-size: 0.92rem; font-weight: 600; color: var(--text-muted);">8 doctors available</span>
+        <span style="font-size: 0.8rem; color: var(--text-light); background: var(--bg-alt); padding: 4px 10px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">Sample Demonstration Profiles</span>
+      </div>
+
+      <!-- Dynamic Doctors Grid (Rendered by js/doctors.js) -->
+      <div class="doctors-grid" id="doctorsDirectoryGrid">
+        <!-- Javascript dynamically injects cards here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+          <p>Delivering modern, compassionate, evidence-based healthcare for every chapter of life. Your trusted medical partner close to home.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="doctors.html">Find a Doctor</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <div class="footer-links-list">
+            <a href="services.html">Cardiology</a>
+            <a href="services.html">Pediatrics</a>
+            <a href="services.html">General Medicine</a>
+            <a href="services.html">Orthopedics</a>
+            <a href="services.html">Dentistry</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>500 Wellness Way, Suite 400<br>Medical Center, NY 10001 (Demo)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+1 (800) 555-CARE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AuraCare Health Platform. All rights reserved. (Frontend Demonstration).</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/doctors.js"></script>
+</body>
+</html>

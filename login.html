@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AuraCare Health - Patient Portal Login. Sign in to access your appointment schedules, health records, and specialist consultations.">
+  <title>Patient Login | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+
+  <!-- Header Brand Bar -->
+  <header class="auth-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <div class="brand-text">stackly<span></span></div>
+      </a>
+      <a href="index.html" class="btn btn-outline btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <span>Back to Homepage</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Auth Container -->
+  <div class="auth-container">
+    <div class="auth-card-wrapper reveal">
+      
+      <!-- Left Side: Informative Healthcare Banner -->
+      <div class="auth-banner">
+        <div class="auth-banner-content">
+          <span class="section-badge" style="background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25);">
+            <span class="section-badge-dot" style="background: #a7f3d0;"></span> Patient Portal
+          </span>
+          <h2 class="auth-banner-title">Welcome Back to Your Health Hub</h2>
+          <p class="auth-banner-desc">Manage upcoming appointments, view laboratory diagnostic reports, and message your care team in a secure environment.</p>
+
+          <div class="auth-features-list">
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Real-time appointment schedule & reminders</span>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Direct messaging with specialist physicians</span>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Digital access to imaging & lab results</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-banner-footer">
+          <span>🔒 Demo Mode: Client-side browser storage demonstration.</span>
+        </div>
+      </div>
+
+      <!-- Right Side: Login Form -->
+      <div class="auth-form-side">
+        <div class="auth-form-header">
+          <h1 class="auth-form-title">Sign In</h1>
+          <p class="auth-form-subtitle">Enter your credentials to access your health dashboard.</p>
+        </div>
+
+        <!-- Quick 1-Click Demo Credentials Filler -->
+        <div class="demo-credentials-box">
+          <div class="demo-credentials-info">
+            <strong>⚡ Quick Demo Credentials</strong>
+            <span>demo@carepulse.com • Password123!</span>
+          </div>
+          <button type="button" class="demo-auto-fill-btn" id="btnAutofillDemo">Auto Fill</button>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <!-- Email Input -->
+          <div class="form-group" style="margin-bottom: 18px;">
+            <label for="loginEmail" class="form-label">Email Address <span class="required">*</span></label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="e.g. demo@carepulse.com" required autocomplete="email">
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group" style="margin-bottom: 8px;">
+            <label for="loginPassword" class="form-label">Password <span class="required">*</span></label>
+            <div class="password-input-wrap">
+              <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Authentication Error Message Box -->
+          <div class="error-message" id="loginAuthError" style="margin-bottom: 12px;"></div>
+
+          <!-- Options: Remember Me & Forgot Password -->
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password-link" id="forgotPasswordLink">Forgot Password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-lg auth-submit-btn">
+            <span>Sign In to Dashboard</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+
+          <!-- Switch to Register Link -->
+          <p class="auth-switch-text">
+            Don't have an account yet? <a href="register.html">Create an Account</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

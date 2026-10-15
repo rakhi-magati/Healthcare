@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="AuraCare Health - Modern, compassionate healthcare platform offering leading medical specialists, easy appointment booking, and comprehensive patient care.">
+  <title>Stackly | Modern Healthcare Platform</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>500 Wellness Way, Medical District, NY</span>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">24/7 Rapid Emergency Care</span>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <strong style="color: #ffffff;">+1 (800) 555-CARE</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+        <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+
+      <!-- 6 Main Navigation Tabs -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link">Doctor's</a>
+        <a href="appointments.html" class="nav-link">Appointments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Auth State & CTA Button -->
+      <div class="header-actions">
+        <div class="auth-nav">
+          <!-- Populated dynamically by main.js (Login/Register or User Profile/Dashboard) -->
+          <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+          <a href="register.html" class="btn btn-secondary btn-sm">Register</a>
+        </div>
+        <a href="appointments.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNavDrawer">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link">Doctor's</a>
+      <a href="appointments.html" class="nav-link">Appointments</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-nav-actions">
+        <a href="appointments.html" class="btn btn-primary btn-sm" style="width: 100%;">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Premium Visuals & Floating Elements -->
+  <main>
+    <section class="hero">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-tag">Leading Care</span>
+            <span>Compassionate Healthcare, Advanced Medicine</span>
+          </div>
+          <h1 class="hero-title">
+            Your Health, <br>
+            <span class="gradient-text">Our Priority.</span>
+          </h1>
+          <p class="hero-description">
+            Experience next-generation healthcare designed around you. AuraCare connects you with board-certified
+            physicians, modern clinical diagnostics, and seamless same-day appointments.
+          </p>
+          <div class="hero-buttons">
+            <a href="appointments.html" class="btn btn-primary btn-lg">
+              <span>Book an Appointment</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="services.html" class="btn btn-secondary btn-lg">
+              <span>Explore Services</span>
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="hero-trust">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                alt="Patient avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                alt="Patient avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+                alt="Patient avatar">
+              <div class="avatar-more">+18k</div>
+            </div>
+            <div class="trust-text">
+              <div class="stars-row">★★★★★</div>
+              <strong>Over 18,500 Happy Patients</strong>
+              <span>Rated 4.9/5 Across Top Specialties</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Composition with Floating Cards -->
+        <div class="hero-visual-wrapper reveal reveal-delay-2">
+          <!-- Floating Card 1: 24/7 Care -->
+          <div class="floating-badge float-top-left">
+            <div class="badge-icon teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <strong>24/7 Rapid Care</strong>
+              <span>Always Here For You</span>
+            </div>
+          </div>
+
+          <!-- Floating Card 2: Rating Pill -->
+          <div class="floating-badge float-bottom-right">
+            <div class="badge-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <strong>99.4% Positive</strong>
+              <span>Top-Tier Satisfaction</span>
+            </div>
+          </div>
+
+          <!-- Floating Card 3: Top Specialists -->
+          <div class="floating-badge float-bottom-left">
+            <div class="badge-icon blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7.5" r="4"></circle>
+                <polyline points="17 11 19 13 23 9"></polyline>
+              </svg>
+            </div>
+            <div class="badge-content">
+              <strong>120+ Specialists</strong>
+              <span>Board-Certified Team</span>
+            </div>
+          </div>
+
+          <!-- Main Hero Image Frame -->
+          <div class="hero-main-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85"
+              alt="Senior Medical Specialist warmly smiling in modern hospital" fetchpriority="high">
+            <div class="hero-card-overlay">
+              <h4>Modern Clinical Excellence</h4>
+              <p>Cutting-edge medical technology coupled with heartfelt human empathy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Statistics Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-card-wrapper reveal">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-counter="18500" data-suffix="+">0</div>
+              <div class="stat-label">Patients Served</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-counter="120" data-suffix="+">0</div>
+              <div class="stat-label">Specialist Doctors</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-counter="45" data-suffix="+">0</div>
+              <div class="stat-label">Medical Specialties</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-number" data-counter="99.4" data-suffix="%">0</div>
+              <div class="stat-label">Patient Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Services Section -->
+    <section class="section" id="servicesSection">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><span class="section-badge-dot"></span> Clinical Excellence</span>
+          <h2 class="section-title">Our Medical <span>Services</span></h2>
+          <p class="section-desc">From comprehensive preventive checkups to complex specialized treatments, our
+            multidisciplinary team provides complete healthcare under one roof.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: General Medicine -->
+          <article class="service-card reveal">
+            <div class="service-icon-box teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">General Medicine</h3>
+            <p class="service-description">Primary adult care, ongoing wellness checkups, routine health screenings, and
+              coordinated chronic condition management.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Comprehensive Health Exams</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Blood Pressure & Diabetes Care</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Preventive Immunizations</li>
+            </ul>
+            <a href="appointments.html?specialty=General%20Medicine" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 2: Cardiology -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon-box rose">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="service-title">Cardiology</h3>
+            <p class="service-description">Advanced cardiovascular diagnostic assessments, echocardiograms, hypertension
+              management, and heart health prevention.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> 12-Lead ECG & Holter Monitoring</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Stress Testing & Echo</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Heart Disease Prevention</li>
+            </ul>
+            <a href="appointments.html?specialty=Cardiology" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 3: Dentistry -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon-box blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Dentistry</h3>
+            <p class="service-description">Modern, gentle dental care featuring cosmetic smile makeovers, ultrasonic
+              cleaning, orthodontics, and restorative oral treatments.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Gentle Cleanings & Scaling</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> 3D Dental Digital Imaging</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Root Canal & Fillings</li>
+            </ul>
+            <a href="appointments.html?specialty=Dentistry" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 4: Pediatrics -->
+          <article class="service-card reveal">
+            <div class="service-icon-box green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="service-title">Pediatrics</h3>
+            <p class="service-description">Dedicated medical care for infants, children, and teens with welcoming
+              pediatricians who make visits comforting and fun.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Well-Child Development Exams</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Childhood Vaccinations</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pediatric Acute Illness Care</li>
+            </ul>
+            <a href="appointments.html?specialty=Pediatrics" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 5: Dermatology -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon-box amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Dermatology</h3>
+            <p class="service-description">Evidence-based clinical treatments for skin health, mole mapping, eczema,
+              psoriasis, acne management, and cosmetic therapies.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Comprehensive Skin Screenings</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Advanced Laser & Light Care</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Chronic Skin Allergy Relief</li>
+            </ul>
+            <a href="appointments.html?specialty=Dermatology" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Card 6: Orthopedics -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon-box indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Orthopedics</h3>
+            <p class="service-description">Specialized musculoskeletal restoration, sports medicine, joint replacements,
+              and individualized physical physical therapy programs.</p>
+            <ul class="service-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Joint Mobility & Pain Relief</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Sports Injury Rehabilitation</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Minimally Invasive Procedures</li>
+            </ul>
+            <a href="appointments.html?specialty=Orthopedics" class="service-link">
+              <span>Book Specialty</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="services.html" class="btn btn-outline btn-lg">
+            <span>View All Healthcare Services</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section section-bg-alt">
+      <div class="container why-us-grid">
+        <div class="why-us-content reveal">
+          <span class="section-badge"><span class="section-badge-dot"></span> The AuraCare Difference</span>
+          <h2 class="section-title">Why Thousands of Families <span>Choose Us</span></h2>
+          <p class="section-desc">We combine premier medical expertise with the warmth, patience, and attention you and
+            your loved ones deserve.</p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="feature-title">Board-Certified Specialists</h4>
+                <p class="feature-text">Our doctors hold credentials from leading global medical academies with deep
+                  experience across diagnostic and clinical medicine.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <h4 class="feature-title">Modern Diagnostic Labs</h4>
+                <p class="feature-text">High-precision laboratory equipment and immediate digital imaging report
+                  delivery right into your patient portal.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="feature-title">Patient-First Compassion</h4>
+                <p class="feature-text">We listen attentively to your medical story and craft personalized healthcare
+                  solutions that fit your lifestyle.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="feature-title">Instant Online Booking</h4>
+                <p class="feature-text">No long telephone hold times. Select your specialist, choose a convenient date,
+                  and receive instant booking confirmation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-us-image-wrap reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
+            alt="Medical team reviewing clinical scans together" class="why-us-main-img">
+          <div class="why-us-card-float">
+            <div class="badge-stat">15+</div>
+            <strong style="color: var(--text-main); font-size: 1rem; display: block; margin-top: 4px;">Years of
+              Excellence</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Delivering accredited,
+              award-winning healthcare since 2011.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Featured Doctors -->
+    <section class="section" id="doctorsSection">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><span class="section-badge-dot"></span> Medical Experts</span>
+          <h2 class="section-title">Meet Our <span>Doctors</span></h2>
+          <p class="section-desc">Compassionate clinicians, recognized medical researchers, and caring specialists
+            dedicated to your family's health.</p>
+        </div>
+
+        <div class="doctors-grid">
+          <!-- Doctor 1 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=85"
+                alt="Dr. Sarah Jenkins">
+              <span class="doctor-specialty-badge">Cardiology</span>
+              <span class="doctor-availability">Mon, Wed, Fri</span>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-rating">
+                <span>★</span> 4.9 <span>(142 reviews)</span>
+              </div>
+              <h3 class="doctor-name">Dr. Sarah Jenkins</h3>
+              <p class="doctor-qualification">MD, FACC • Harvard Medical</p>
+              <p class="doctor-experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                14+ Years Experience
+              </p>
+              <div class="doctor-card-actions">
+                <a href="doctors.html" class="btn btn-outline btn-sm">Profile</a>
+                <a href="appointments.html?doctor=dr-sarah-jenkins&specialty=Cardiology"
+                  class="btn btn-primary btn-sm">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="doctor-card reveal reveal-delay-1">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=85"
+                alt="Dr. Oliver Chen">
+              <span class="doctor-specialty-badge">General Medicine</span>
+              <span class="doctor-availability">Mon - Thu</span>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-rating">
+                <span>★</span> 4.8 <span>(98 reviews)</span>
+              </div>
+              <h3 class="doctor-name">Dr. Oliver Chen</h3>
+              <p class="doctor-qualification">MD, MPH • Stanford School</p>
+              <p class="doctor-experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                12+ Years Experience
+              </p>
+              <div class="doctor-card-actions">
+                <a href="doctors.html" class="btn btn-outline btn-sm">Profile</a>
+                <a href="appointments.html?doctor=dr-oliver-chen&specialty=General%20Medicine"
+                  class="btn btn-primary btn-sm">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="doctor-card reveal reveal-delay-2">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=85"
+                alt="Dr. Amara Williams">
+              <span class="doctor-specialty-badge">Pediatrics</span>
+              <span class="doctor-availability">Tue - Sat</span>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-rating">
+                <span>★</span> 5.0 <span>(180 reviews)</span>
+              </div>
+              <h3 class="doctor-name">Dr. Amara Williams</h3>
+              <p class="doctor-qualification">MD, FAAP • Columbia University</p>
+              <p class="doctor-experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                11+ Years Experience
+              </p>
+              <div class="doctor-card-actions">
+                <a href="doctors.html" class="btn btn-outline btn-sm">Profile</a>
+                <a href="appointments.html?doctor=dr-amara-williams&specialty=Pediatrics"
+                  class="btn btn-primary btn-sm">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 4 -->
+          <article class="doctor-card reveal reveal-delay-3">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=85"
+                alt="Dr. Marcus Vance">
+              <span class="doctor-specialty-badge">Orthopedics</span>
+              <span class="doctor-availability">Mon, Tue, Thu</span>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-rating">
+                <span>★</span> 4.9 <span>(210 reviews)</span>
+              </div>
+              <h3 class="doctor-name">Dr. Marcus Vance</h3>
+              <p class="doctor-qualification">MD, FAAOS • UCLA Medicine</p>
+              <p class="doctor-experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                16+ Years Experience
+              </p>
+              <div class="doctor-card-actions">
+                <a href="doctors.html" class="btn btn-outline btn-sm">Profile</a>
+                <a href="appointments.html?doctor=dr-marcus-vance&specialty=Orthopedics"
+                  class="btn btn-primary btn-sm">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 44px;">
+          <a href="doctors.html" class="btn btn-primary">
+            <span>Browse Full Doctor Directory</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><span class="section-badge-dot"></span> Simple 3-Step Process</span>
+          <h2 class="section-title">How It <span>Works</span></h2>
+          <p class="section-desc">Accessing top medical care has never been easier. Schedule in minutes from any device.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Choose a Specialist</h3>
+            <p class="step-desc">Filter our directory by medical department, doctor expertise, qualifications, patient
+              ratings, and languages spoken.</p>
+          </div>
+
+          <div class="step-card reveal reveal-delay-1">
+            <span class="step-number">02</span>
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Book an Appointment</h3>
+            <p class="step-desc">Pick your preferred calendar date and available time slot. Fill out your details with
+              instant confirmation.</p>
+          </div>
+
+          <div class="step-card reveal reveal-delay-2">
+            <span class="step-number">03</span>
+            <div class="step-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="step-title">Receive Quality Care</h3>
+            <p class="step-desc">Meet your doctor at our modern facility or connect digitally. Access clinical summaries
+              and prescriptions in your dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge"><span class="section-badge-dot"></span> Testimonials</span>
+          <h2 class="section-title">What Our <span>Patients Say</span></h2>
+          <p class="section-desc">Real stories from individuals and families whose lives have been transformed through
+            compassionate care.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Dr. Jenkins and the cardiology team gave me back my vitality. From the fast
+              scheduling to the thorough explanation of my diagnostics, I felt heard and truly cared for."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
+                alt="Patient Clara Matthews">
+              <div>
+                <div class="author-name">Clara Matthews</div>
+                <div class="author-role">Cardiology Patient • 3 Years</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Taking two toddlers to doctor appointments used to be stressful until we
+              discovered Dr. Amara Williams. The pediatric ward is cheerful and the care is world-class."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
+                alt="Patient David Thorne">
+              <div>
+                <div class="author-name">David Thorne</div>
+                <div class="author-role">Pediatrics Parent • 2 Years</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The patient dashboard makes booking follow-ups and tracking medical history
+              completely effortless. AuraCare sets a gold standard for what modern health should feel like."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80"
+                alt="Patient Samantha Wu">
+              <div>
+                <div class="author-name">Samantha Wu</div>
+                <div class="author-role">Wellness & Orthopedics Patient</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Banner -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-content">
+            <div class="cta-text">
+              <h2 class="cta-title">Ready to Experience Exceptional Healthcare?</h2>
+              <p class="cta-desc">Book your consultation with one of our specialized doctors today. Same-day
+                appointments and telehealth checkups available.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="appointments.html" class="btn btn-light btn-lg">
+                <span>Book Appointment</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="contact.html" class="btn btn-outline btn-lg"
+                style="color: white; border-color: rgba(255,255,255,0.4);">
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand" aria-label="Stackly Health Home">
+            <!-- <div class="brand-text">stackly<span></span></div> -->
+            <img class="logo" src="/assets/images/OIP1" alt="">
+          </a>
+          <p>Delivering modern, compassionate, evidence-based healthcare for every chapter of life. Your trusted medical
+            partner close to home.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="doctors.html">Find a Doctor</a>
+            <a href="appointments.html">Book Appointment</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="dashboard.html">Patient Portal</a>
+          </div>
+        </div>
+
+        <!-- Medical Services -->
+        <div class="footer-col">
+          <h4>Medical Specialties</h4>
+          <div class="footer-links-list">
+            <a href="services.html">General Medicine</a>
+            <a href="services.html">Cardiology Care</a>
+            <a href="services.html">Pediatric Wellness</a>
+            <a href="services.html">Orthopedic Surgery</a>
+            <a href="services.html">Clinical Dermatology</a>
+            <a href="services.html">Comprehensive Dentistry</a>
+            <a href="services.html">Diagnostic Lab</a>
+          </div>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="footer-col">
+          <h4>Clinic Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>500 Wellness Way, Suite 400<br>Medical Center, NY 10001</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-CARE<br>+1 (555) 019-2831</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>contact@auracare-demo.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AuraCare Health Platform. All rights reserved. (Frontend Demonstration).</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+          <a href="#">Security Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

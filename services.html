@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AuraCare Healthcare Services - Discover comprehensive medical departments from General Medicine, Cardiology, Pediatrics, Orthopedics, to 24/7 Emergency Care.">
+  <title>Our Services | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>500 Wellness Way, Medical District, NY</span>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">24/7 Rapid Emergency Care</span>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <strong style="color: #ffffff;">+1 (800) 555-CARE</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+     <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+
+      <!-- 6 Main Navigation Tabs -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="doctors.html" class="nav-link">Doctor's</a>
+        <a href="appointments.html" class="nav-link">Appointments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Auth State & CTA Button -->
+      <div class="header-actions">
+        <div class="auth-nav">
+          <!-- Populated dynamically by main.js (Login/Register or User Profile/Dashboard) -->
+          <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+          <a href="register.html" class="btn btn-secondary btn-sm">Register</a>
+        </div>
+        <a href="appointments.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNavDrawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="doctors.html" class="nav-link">Doctor's</a>
+      <a href="appointments.html" class="nav-link">Appointments</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-nav-actions">
+        <a href="appointments.html" class="btn btn-primary btn-sm" style="width: 100%;">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Our Services</span>
+      </div>
+      <h1 class="page-hero-title">Comprehensive Healthcare Services</h1>
+      <p class="page-hero-desc">From routine preventative wellness to advanced cardiovascular surgery and rapid emergency triage, explore our clinical departments.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Filter & Services Grid -->
+  <main class="section">
+    <div class="container">
+      <!-- Search & Category Filter Bar -->
+      <div class="filter-bar reveal">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="servicesSearchInput" placeholder="Search medical services (e.g., heart, teeth, skin, pediatric)..." aria-label="Search healthcare services">
+        </div>
+        <div class="filter-pills" id="serviceCategoryPills">
+          <button type="button" class="filter-pill active" data-category="all">All Specialties (8)</button>
+          <button type="button" class="filter-pill" data-category="primary">Primary & Family</button>
+          <button type="button" class="filter-pill" data-category="specialized">Specialized Medicine</button>
+          <button type="button" class="filter-pill" data-category="urgent">Diagnostic & Emergency</button>
+        </div>
+      </div>
+
+      <!-- Services Grid (8 Required Services) -->
+      <div class="services-grid" id="servicesDirectoryGrid">
+        <!-- 1. General Medicine -->
+        <article class="service-card reveal" data-category="primary" data-title="General Medicine Primary Care Preventive Physicals">
+          <div class="service-icon-box teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <h3 class="service-title">General Medicine</h3>
+          <p class="service-description">Routine physical examinations, preventative adult health assessments, chronic lifestyle condition management (diabetes, cholesterol, hypertension), and referrals.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Annual Wellness Checks & Vitals</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Comprehensive Blood Work Panel</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Adult Immunizations & Vaccines</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=General%20Medicine" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 2. Cardiology -->
+        <article class="service-card reveal reveal-delay-1" data-category="specialized" data-title="Cardiology Heart Cardiovascular ECG Echo">
+          <div class="service-icon-box rose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <h3 class="service-title">Cardiology</h3>
+          <p class="service-description">State-of-the-art cardiovascular evaluation, 12-lead electrocardiography (ECG), Holter rhythm telemetry, echocardiograms, and post-infarction care.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Stress Echocardiography Testing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Arrhythmia & Pacemaker Monitoring</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hypertension Specialist Clinic</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Cardiology" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 3. Dentistry -->
+        <article class="service-card reveal reveal-delay-2" data-category="primary" data-title="Dentistry Dental Teeth Cleaning Oral Hygiene Cavity">
+          <div class="service-icon-box blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h3 class="service-title">Dentistry</h3>
+          <p class="service-description">Full-spectrum oral healthcare including ultrasonic hygiene cleanings, gentle restorative tooth fillings, root canal therapy, crowns, and teeth whitening.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Digital 3D Dental Tomography</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pain-Free Ultrasonic Scaling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Cosmetic Dentistry & Veneers</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Dentistry" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 4. Pediatrics -->
+        <article class="service-card reveal" data-category="primary" data-title="Pediatrics Children Child Kids Newborn Baby">
+          <div class="service-icon-box green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3 class="service-title">Pediatrics</h3>
+          <p class="service-description">Warm, child-centered medical support from infancy to adolescence. Covering milestone developmental tracking, immunizations, and pediatric urgent care.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Newborn Care & Growth Tracking</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Childhood Immunization Schedules</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> School & Sports Physicals</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Pediatrics" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 5. Dermatology -->
+        <article class="service-card reveal reveal-delay-1" data-category="specialized" data-title="Dermatology Skin Rash Mole Acne Laser">
+          <div class="service-icon-box amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path></svg>
+          </div>
+          <h3 class="service-title">Dermatology</h3>
+          <p class="service-description">Medical diagnosis and targeted treatment of skin disorders, dermoscopy mole evaluations, chronic eczema, psoriasis therapy, and clinical aesthetics.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Digital Mole & Melanoma Mapping</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Acne & Rosacea Treatments</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Laser Skin Rejuvenation</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Dermatology" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 6. Orthopedics -->
+        <article class="service-card reveal reveal-delay-2" data-category="specialized" data-title="Orthopedics Bone Joint Spine Fracture Sports">
+          <div class="service-icon-box indigo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
+          </div>
+          <h3 class="service-title">Orthopedics</h3>
+          <p class="service-description">Complete musculoskeletal care including knee and hip joint preservation, arthroscopic procedures, fracture rehabilitation, and physical therapy.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Minimally Invasive Arthroscopy</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sports Ligament (ACL) Repair</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Spine & Back Decompression</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Orthopedics" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 7. Diagnostic Services -->
+        <article class="service-card reveal" data-category="urgent" data-title="Diagnostic Services MRI CT X-ray Ultrasound Blood Lab">
+          <div class="service-icon-box teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+          <h3 class="service-title">Diagnostic Services</h3>
+          <p class="service-description">Accredited clinical lab and digital radiology department offering fast turnaround for routine pathology panels, high-res MRI, CT scans, and 4D sonograms.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Siemens 3T MRI & 128-Slice CT</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast In-House Pathology Lab</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure Digital Image Access</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="appointments.html?specialty=Diagnostic%20Services" class="btn btn-primary btn-sm" style="flex: 1;">Book Visit</a>
+            <a href="doctors.html" class="btn btn-outline btn-sm">Doctors</a>
+          </div>
+        </article>
+
+        <!-- 8. Emergency Care -->
+        <article class="service-card reveal reveal-delay-1" data-category="urgent" data-title="Emergency Care Trauma Urgent 24/7 ICU">
+          <div class="service-icon-box rose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <h3 class="service-title">Emergency Care</h3>
+          <p class="service-description">24/7 dedicated acute emergency room staffed by board-certified emergency physicians, critical care nurses, and rapid trauma intervention teams.</p>
+          <ul class="service-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 24/7 Emergency Triage & ICU</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Rapid Chest Pain & Stroke Center</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Walk-In Emergency Admission</li>
+          </ul>
+          <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 16px;">
+            <a href="tel:+18005552273" class="btn btn-primary btn-sm" style="flex: 1; background: #e11d48;">Call 24/7 ER</a>
+            <a href="contact.html" class="btn btn-outline btn-sm">Directions</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Empty state if search has no results -->
+      <div id="noServicesFound" style="display: none; text-align: center; padding: 60px 20px; background: white; border-radius: var(--radius-xl); border: 1px solid var(--border-color); margin-top: 20px;">
+        <svg style="width: 48px; height: 48px; color: var(--text-light); margin: 0 auto 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <h3 style="font-size: 1.25rem; margin-bottom: 6px;">No medical services matched your query</h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">Try adjusting your keyword or reset filters to view all specialties.</p>
+        <button class="btn btn-outline btn-sm" id="resetServicesBtn">Reset Filters</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+          <p>Delivering modern, compassionate, evidence-based healthcare for every chapter of life. Your trusted medical partner close to home.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="doctors.html">Find a Doctor</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinical Services</h4>
+          <div class="footer-links-list">
+            <a href="services.html">General Medicine</a>
+            <a href="services.html">Cardiology</a>
+            <a href="services.html">Dentistry</a>
+            <a href="services.html">Pediatrics</a>
+            <a href="services.html">Dermatology</a>
+            <a href="services.html">Orthopedics</a>
+            <a href="services.html">Emergency 24/7</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>500 Wellness Way, Suite 400<br>Medical Center, NY 10001 (Demo)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+1 (800) 555-CARE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AuraCare Health Platform. All rights reserved. (Frontend Demonstration).</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Services Search & Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('servicesSearchInput');
+      const pills = document.querySelectorAll('#serviceCategoryPills .filter-pill');
+      const cards = document.querySelectorAll('#servicesDirectoryGrid .service-card');
+      const emptyState = document.getElementById('noServicesFound');
+      const resetBtn = document.getElementById('resetServicesBtn');
+
+      let currentCat = 'all';
+      let currentQuery = '';
+
+      function filterServices() {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const cardTitle = card.getAttribute('data-title').toLowerCase();
+          
+          const matchesCat = currentCat === 'all' || cardCat === currentCat;
+          const matchesQuery = !currentQuery || cardTitle.includes(currentQuery.toLowerCase());
+
+          if (matchesCat && matchesQuery) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (emptyState) {
+          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentCat = pill.getAttribute('data-category');
+          filterServices();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim();
+          filterServices();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          currentQuery = '';
+          currentCat = 'all';
+          pills.forEach(p => p.classList.toggle('active', p.getAttribute('data-category') === 'all'));
+          filterServices();
+        });
+      }
+    });
+  </script>
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+</body>
+</html>

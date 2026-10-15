@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an Appointment at AuraCare Health - Select medical specialty, choose your preferred doctor, pick convenient dates and times, and receive instant booking confirmation.">
+  <title>Book Appointment | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>500 Wellness Way, Medical District, NY</span>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">24/7 Rapid Emergency Care</span>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <strong style="color: #ffffff;">+1 (800) 555-CARE</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+
+      <!-- 6 Main Navigation Tabs -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link">Doctor's</a>
+        <a href="appointments.html" class="nav-link active">Appointments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Auth State & CTA Button -->
+      <div class="header-actions">
+        <div class="auth-nav">
+          <!-- Populated dynamically by main.js (Login/Register or User Profile/Dashboard) -->
+          <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+          <a href="register.html" class="btn btn-secondary btn-sm">Register</a>
+        </div>
+        <a href="appointments.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNavDrawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link">Doctor's</a>
+      <a href="appointments.html" class="nav-link active">Appointments</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-nav-actions">
+        <a href="appointments.html" class="btn btn-primary btn-sm" style="width: 100%;">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Appointments</span>
+      </div>
+      <h1 class="page-hero-title">Schedule Your Visit</h1>
+      <p class="page-hero-desc">Choose your medical specialist, select a suitable date and time, and receive an instant booking confirmation summary.</p>
+    </div>
+  </section>
+
+  <!-- Main Booking Interface -->
+  <main class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: start;">
+        
+        <!-- Left: Booking Form Card -->
+        <div class="form-card reveal">
+          <div style="margin-bottom: 24px;">
+            <span class="section-badge" style="margin-bottom: 8px;"><span class="section-badge-dot"></span> Online Booking Portal</span>
+            <h2 style="font-size: 1.8rem; margin-bottom: 6px;">Patient Appointment Form</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Please provide your contact information and consultation preferences.</p>
+          </div>
+
+          <form id="appointmentForm" novalidate>
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="aptFullName" class="form-label">Full Legal Name <span class="required">*</span></label>
+                <input type="text" id="aptFullName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+                <div class="error-message" id="aptFullNameError"></div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="aptEmail" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="aptEmail" class="form-input" placeholder="e.g. eleanor@example.com" required>
+                <div class="error-message" id="aptEmailError"></div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="aptPhone" class="form-label">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="aptPhone" class="form-input" placeholder="e.g. +1 (555) 234-5678" required>
+                <div class="error-message" id="aptPhoneError"></div>
+              </div>
+
+              <!-- Specialty -->
+              <div class="form-group">
+                <label for="aptSpecialty" class="form-label">Medical Specialty <span class="required">*</span></label>
+                <select id="aptSpecialty" class="form-select" required>
+                  <option value="">Select Department</option>
+                  <option value="General Medicine">General Medicine</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Dentistry">Dentistry</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="Diagnostic Services">Diagnostic Services</option>
+                  <option value="Emergency Care">Emergency Care</option>
+                </select>
+                <div class="error-message" id="aptSpecialtyError"></div>
+              </div>
+
+              <!-- Doctor Selection -->
+              <div class="form-group full-width">
+                <label for="aptDoctor" class="form-label">Preferred Doctor / Specialist <span class="required">*</span></label>
+                <select id="aptDoctor" class="form-select" required>
+                  <option value="">Select a Specialist</option>
+                </select>
+                <div class="error-message" id="aptDoctorError"></div>
+              </div>
+
+              <!-- Date Selection -->
+              <div class="form-group">
+                <label for="aptDate" class="form-label">Preferred Date <span class="required">*</span></label>
+                <input type="date" id="aptDate" class="form-input" required>
+                <div class="error-message" id="aptDateError"></div>
+              </div>
+
+              <!-- Hidden Time Slot Input -->
+              <input type="hidden" id="aptSelectedTime" value="">
+
+              <!-- Interactive Time Slot Selection -->
+              <div class="form-group full-width">
+                <label class="form-label">Preferred Time Slot <span class="required">*</span></label>
+                <div class="time-slot-grid" id="timeSlotsGroup">
+                  <div class="time-slot-pill" data-time="09:00 AM - 09:30 AM">09:00 AM (Morning)</div>
+                  <div class="time-slot-pill" data-time="10:30 AM - 11:00 AM">10:30 AM (Morning)</div>
+                  <div class="time-slot-pill" data-time="11:45 AM - 12:15 PM">11:45 AM (Morning)</div>
+                  <div class="time-slot-pill" data-time="02:00 PM - 02:30 PM">02:00 PM (Afternoon)</div>
+                  <div class="time-slot-pill" data-time="03:30 PM - 04:00 PM">03:30 PM (Afternoon)</div>
+                  <div class="time-slot-pill" data-time="05:15 PM - 05:45 PM">05:15 PM (Evening)</div>
+                </div>
+                <div class="error-message" id="aptTimeError"></div>
+              </div>
+
+              <!-- Reason for Visit -->
+              <div class="form-group full-width">
+                <label for="aptReason" class="form-label">Reason for Visit / Symptoms <span class="required">*</span></label>
+                <textarea id="aptReason" class="form-textarea" rows="4" placeholder="Briefly describe your symptoms or consultation goals (e.g., routine annual checkup, chest discomfort evaluation, joint soreness)..." required></textarea>
+                <div class="error-message" id="aptReasonError"></div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 28px;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>Submit Appointment Request</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+
+            <!-- Demonstration Notice -->
+            <div class="demo-disclaimer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <div>
+                <strong>Frontend Demonstration:</strong> This form validates your booking locally in browser memory and records it onto your <a href="dashboard.html" style="text-decoration: underline; font-weight: 600;">Patient Dashboard</a>. No actual healthcare provider is contacted.
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Information & FAQ Sidebar -->
+        <div class="reveal reveal-delay-2" style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Preparation Card -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 30px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--primary-50); color: var(--primary); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 12px;">What to Bring to Your Visit</h3>
+            <ul style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-body);">
+              <li style="display: flex; gap: 8px;"><span style="color: var(--accent); font-weight: 700;">✓</span> Photo Identification (Driver's License or ID)</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--accent); font-weight: 700;">✓</span> Insurance card or policy details</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--accent); font-weight: 700;">✓</span> Current prescription medications list</li>
+              <li style="display: flex; gap: 8px;"><span style="color: var(--accent); font-weight: 700;">✓</span> Relevant past medical or lab records</li>
+            </ul>
+          </div>
+
+          <!-- Cancellation Policy -->
+          <div style="background: white; border-radius: var(--radius-xl); padding: 30px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--secondary-light); color: var(--secondary); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Flexible Rescheduling</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px;">
+              Need to reschedule or cancel? You can effortlessly manage all appointments directly inside your user dashboard at least 24 hours in advance without cancellation fees.
+            </p>
+            <a href="dashboard.html" class="btn btn-outline btn-sm">Visit Patient Portal</a>
+          </div>
+
+          <!-- Emergency Contact Card -->
+          <div style="background: linear-gradient(135deg, #074b52, #0a6c74); color: white; border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow-md);">
+            <h4 style="color: white; font-size: 1.2rem; margin-bottom: 6px;">Experiencing an Acute Emergency?</h4>
+            <p style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.85); line-height: 1.5; margin-bottom: 16px;">If you have severe chest pain, sudden numbness, or difficulty breathing, call emergency services immediately.</p>
+            <a href="tel:911" class="btn btn-light btn-sm" style="background: white; color: #b91c1c; font-weight: 700;">Dial 911 / Emergency</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+          <p>Delivering modern, compassionate, evidence-based healthcare for every chapter of life. Your trusted medical partner close to home.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="doctors.html">Find a Doctor</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <div class="footer-links-list">
+            <a href="services.html">Cardiology</a>
+            <a href="services.html">Pediatrics</a>
+            <a href="services.html">General Medicine</a>
+            <a href="services.html">Orthopedics</a>
+            <a href="services.html">Dentistry</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>500 Wellness Way, Suite 400<br>Medical Center, NY 10001 (Demo)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+1 (800) 555-CARE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AuraCare Health Platform. All rights reserved. (Frontend Demonstration).</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+</body>
+</html>

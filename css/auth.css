@@ -1,0 +1,306 @@
+/* ==========================================================================
+   AuraCare Health - Authentication Stylesheet (Login & Registration)
+   ========================================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 10% 20%, rgba(204, 251, 241, 0.45) 0%, rgba(248, 250, 252, 0.95) 50%),
+              radial-gradient(circle at 90% 80%, rgba(224, 242, 254, 0.5) 0%, rgba(248, 250, 252, 0.95) 50%);
+}
+
+.auth-header {
+  padding: 24px 0;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.auth-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 980px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.auth-banner {
+  background: linear-gradient(135deg, #074b52 0%, #0a6c74 60%, #0369a1 100%);
+  color: white;
+  padding: 50px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-banner::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.auth-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-banner-title {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.auth-banner-desc {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.auth-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.auth-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.auth-feature-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.auth-feature-icon svg {
+  width: 14px;
+  height: 14px;
+  color: #a7f3d0;
+}
+
+.auth-banner-footer {
+  position: relative;
+  z-index: 2;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.auth-form-side {
+  padding: 50px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-header {
+  margin-bottom: 30px;
+}
+
+.auth-form-title {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.auth-form-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Demo Credentials Helper Pill */
+.demo-credentials-box {
+  background: var(--primary-50);
+  border: 1px dashed var(--primary-200);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.demo-credentials-info {
+  font-size: 0.82rem;
+  color: var(--primary-dark);
+}
+
+.demo-credentials-info strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.demo-auto-fill-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.demo-auto-fill-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Inputs & Password Toggle */
+.password-input-wrap {
+  position: relative;
+}
+
+.password-input-wrap .form-input {
+  padding-right: 46px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-main);
+}
+
+.password-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Password Strength Indicator */
+.password-strength-container {
+  margin-top: 8px;
+}
+
+.strength-bar-track {
+  height: 4px;
+  width: 100%;
+  background-color: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.strength-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.strength-weak { width: 33%; background-color: var(--danger); }
+.strength-medium { width: 66%; background-color: var(--warning); }
+.strength-strong { width: 100%; background-color: var(--accent); }
+
+/* Form Options & Links */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0 24px;
+  font-size: 0.88rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text-body);
+}
+
+.forgot-password-link {
+  color: var(--primary);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.forgot-password-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.auth-switch-text {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.auth-switch-text a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.auth-switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .auth-card-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .auth-banner {
+    display: none;
+  }
+  .auth-form-side {
+    padding: 36px 24px;
+  }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AuraCare Health - Reach out to our patient concierge, view clinic locations, emergency numbers, and clinic operating hours.">
+  <title>Contact Us | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>500 Wellness Way, Medical District, NY</span>
+        </div>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-badge">24/7 Rapid Emergency Care</span>
+        <div class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <strong style="color: #ffffff;">+1 (800) 555-CARE</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+    <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+
+      <!-- 6 Main Navigation Tabs -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link">Doctor's</a>
+        <a href="appointments.html" class="nav-link">Appointments</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Auth State & CTA Button -->
+      <div class="header-actions">
+        <div class="auth-nav">
+          <!-- Populated dynamically by main.js (Login/Register or User Profile/Dashboard) -->
+          <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+          <a href="register.html" class="btn btn-secondary btn-sm">Register</a>
+        </div>
+        <a href="appointments.html" class="btn btn-primary btn-sm">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav" id="mobileNavDrawer">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="doctors.html" class="nav-link">Doctor's</a>
+      <a href="appointments.html" class="nav-link">Appointments</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <div class="mobile-nav-actions">
+        <a href="appointments.html" class="btn btn-primary btn-sm" style="width: 100%;">
+          <span>Book Appointment</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Contact Us</span>
+      </div>
+      <h1 class="page-hero-title">Get in Touch with Our Team</h1>
+      <p class="page-hero-desc">Have questions regarding appointments, medical records, or insurance? Our healthcare concierge is ready to assist you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Information Cards Grid -->
+  <main class="section">
+    <div class="container">
+      <div class="services-grid" style="margin-bottom: 50px;">
+        <!-- Card 1: Clinic Address -->
+        <div class="service-card reveal">
+          <div class="service-icon-box teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h3 class="service-title">Our Campus Location</h3>
+          <p class="service-description">500 Wellness Way, Suite 400<br>Medical Center District, NY 10001<br><span style="font-size: 0.8rem; color: var(--text-light);">(Demo Sample Facility)</span></p>
+          <a href="#mapSection" class="service-link">View On Map <span>↓</span></a>
+        </div>
+
+        <!-- Card 2: Phone & Emergency -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon-box blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <h3 class="service-title">Telephone Numbers</h3>
+          <p class="service-description">
+            General Inquiries: +1 (800) 555-CARE<br>
+            24/7 Acute Line: +1 (555) 019-2831<br>
+            Patient Billing: +1 (555) 019-2832
+          </p>
+          <a href="tel:18005552273" class="service-link">Call Support <span>→</span></a>
+        </div>
+
+        <!-- Card 3: Business Hours -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon-box green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="service-title">Operating Hours</h3>
+          <p class="service-description">
+            Mon - Fri: 8:00 AM - 8:00 PM<br>
+            Saturday: 9:00 AM - 5:00 PM<br>
+            Sunday: Emergency Trauma Unit Open 24/7
+          </p>
+          <span style="color: var(--accent-dark); font-weight: 600; font-size: 0.85rem;">Walk-Ins Welcome For Urgent Care</span>
+        </div>
+      </div>
+
+      <!-- Contact Form & Interactive Map Grid -->
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start;">
+        
+        <!-- Form Side -->
+        <div class="form-card reveal">
+          <h2 style="font-size: 1.8rem; margin-bottom: 6px;">Send Us a Message</h2>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 24px;">Our patient support team will reply to your inquiry within 24 business hours.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name <span class="required">*</span></label>
+                <input type="text" id="contactName" class="form-input" placeholder="e.g. Eleanor Vance" required>
+                <div class="error-message" id="contactNameError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="e.g. eleanor@example.com" required>
+                <div class="error-message" id="contactEmailError"></div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactSubject" class="form-label">Subject / Inquiry Type <span class="required">*</span></label>
+                <select id="contactSubject" class="form-select" required>
+                  <option value="">Select Inquiry Subject</option>
+                  <option value="General Question">General Healthcare Inquiry</option>
+                  <option value="Appointment Question">Appointment or Rescheduling Question</option>
+                  <option value="Medical Records">Medical Records & Test Results</option>
+                  <option value="Billing & Insurance">Billing & Insurance Verification</option>
+                  <option value="Feedback">Patient Experience Feedback</option>
+                </select>
+                <div class="error-message" id="contactSubjectError"></div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="contactMessage" class="form-label">Your Message <span class="required">*</span></label>
+                <textarea id="contactMessage" class="form-textarea" rows="5" placeholder="Please provide specific details about your question..." required></textarea>
+                <div class="error-message" id="contactMessageError"></div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+
+            <div id="contactStatusBox"></div>
+          </form>
+        </div>
+
+        <!-- Interactive Map Simulator & Campus Directions -->
+        <div class="reveal reveal-delay-2" id="mapSection">
+          <div style="background: white; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            
+            <!-- Map Graphical Representation with Healthcare Pin -->
+            <div style="height: 320px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <!-- Simulated map grid lines -->
+              <svg width="100%" height="100%" style="position: absolute; opacity: 0.35;">
+                <defs>
+                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#64748b" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+              </svg>
+
+              <!-- Simulated roads -->
+              <div style="position: absolute; width: 140%; height: 18px; background: #ffffff; transform: rotate(-25deg); opacity: 0.8; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
+              <div style="position: absolute; width: 18px; height: 140%; background: #ffffff; transform: rotate(15deg); opacity: 0.8; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
+
+              <!-- Animated Pin Card -->
+              <div style="position: relative; z-index: 5; background: #ffffff; padding: 14px 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 2px solid var(--primary); display: flex; align-items: center; gap: 12px; animation: floatSlow 3.5s ease-in-out infinite;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20"></path></svg>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.95rem; color: var(--text-main);">AuraCare Main Campus</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">500 Wellness Way, Medical District</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Directions & Parking Details -->
+            <div style="padding: 24px;">
+              <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Directions & Patient Parking</h4>
+              <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin-bottom: 14px;">
+                Complimentary 2-hour validated patient parking is available directly adjacent to the main building in Parking Garage B. Designated handicap bays are situated at the central entrance.
+              </p>
+              <div style="display: flex; gap: 10px; font-size: 0.82rem; color: var(--primary); font-weight: 600;">
+                <span>• Subway: Line 6 (Medical Plaza)</span>
+                <span>• Bus Routes: M15, M34</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+         <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <!-- <div class="brand-text">stackly<span></span></div> -->
+         <img class="logo" src="/assets/images/OIP1" alt="">
+      </a>
+          <p>Delivering modern, compassionate, evidence-based healthcare for every chapter of life. Your trusted medical partner close to home.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="doctors.html">Find a Doctor</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <div class="footer-links-list">
+            <a href="services.html">Cardiology</a>
+            <a href="services.html">Pediatrics</a>
+            <a href="services.html">General Medicine</a>
+            <a href="services.html">Orthopedics</a>
+            <a href="services.html">Dentistry</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>500 Wellness Way, Suite 400<br>Medical Center, NY 10001 (Demo)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+1 (800) 555-CARE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 AuraCare Health Platform. All rights reserved. (Frontend Demonstration).</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

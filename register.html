@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for AuraCare Health Patient Portal - Create your account for personalized appointment management, doctor communication, and medical test history.">
+  <title>Create Patient Account | Stackly Health</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+
+  <!-- Header Brand Bar -->
+  <header class="auth-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand" aria-label="Stackly Health Home">
+        <div class="brand-text">stackly<span></span></div>
+      </a>
+      <a href="index.html" class="btn btn-outline btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <span>Back to HomePage</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Auth Container -->
+  <div class="auth-container">
+    <div class="auth-card-wrapper reveal" style="max-width: 1040px;">
+      
+      <!-- Left Side: Informative Healthcare Banner -->
+      <div class="auth-banner">
+        <div class="auth-banner-content">
+          <span class="section-badge" style="background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.25);">
+            <span class="section-badge-dot" style="background: #a7f3d0;"></span> New Patient Enrollment
+          </span>
+          <h2 class="auth-banner-title">Join Over 18,500 Empowered Patients</h2>
+          <p class="auth-banner-desc">Take complete control of your family's health journey. Create your patient portal account in less than two minutes.</p>
+
+          <div class="auth-features-list">
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>One-click specialist appointment booking</span>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Immediate access to lab work & imaging results</span>
+            </div>
+            <div class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Automated medication refills & consultation summaries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-banner-footer">
+          <span>🔒 Demo Mode: Stores account locally in browser memory for simulation.</span>
+        </div>
+      </div>
+
+      <!-- Right Side: Registration Form -->
+      <div class="auth-form-side">
+        <div class="auth-form-header" style="margin-bottom: 22px;">
+          <h1 class="auth-form-title">Create Account</h1>
+          <p class="auth-form-subtitle">Fill in your information to register as an AuraCare patient.</p>
+        </div>
+
+        <form id="registerForm" novalidate>
+          <!-- Full Name -->
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="regName" class="form-label">Full Legal Name <span class="required">*</span></label>
+            <input type="text" id="regName" class="form-input" placeholder="e.g. Jordan Miller" required autocomplete="name">
+            <div class="error-message" id="regNameError"></div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+            <!-- Email -->
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="regEmail" class="form-input" placeholder="jordan@example.com" required autocomplete="email">
+              <div class="error-message" id="regEmailError"></div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="regPhone" class="form-label">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="regPhone" class="form-input" placeholder="+1 (555) 902-1234" required autocomplete="tel">
+              <div class="error-message" id="regPhoneError"></div>
+            </div>
+          </div>
+
+          <!-- Password & Strength Evaluator -->
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="regPassword" class="form-label">Password <span class="required">*</span></label>
+            <div class="password-input-wrap">
+              <input type="password" id="regPassword" class="form-input" placeholder="Create strong password" required autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" data-target="regPassword" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+            <!-- Password Strength Bar -->
+            <div class="password-strength-container">
+              <div class="strength-bar-track">
+                <div class="strength-bar-fill" id="strengthBarFill"></div>
+              </div>
+              <span class="strength-text" id="strengthText">Password strength</span>
+            </div>
+            <div class="error-message" id="regPasswordError"></div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label for="regConfirmPassword" class="form-label">Confirm Password <span class="required">*</span></label>
+            <div class="password-input-wrap">
+              <input type="password" id="regConfirmPassword" class="form-input" placeholder="Re-enter password" required autocomplete="new-password">
+              <button type="button" class="password-toggle-btn" data-target="regConfirmPassword" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+            <div class="error-message" id="regConfirmPasswordError"></div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label class="remember-me" style="font-size: 0.85rem; align-items: flex-start;">
+              <input type="checkbox" id="regTerms" required style="margin-top: 3px;">
+              <span>I agree to the <a href="#" style="color: var(--primary); text-decoration: underline;">Terms &amp; Conditions</a>, <a href="#" style="color: var(--primary); text-decoration: underline;">HIPAA Privacy Notice</a>, and consent to demo account storage.</span>
+            </label>
+            <div class="error-message" id="regTermsError"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-lg auth-submit-btn">
+            <span>Create Patient Account</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+
+          <!-- Switch to Login Link -->
+          <p class="auth-switch-text">
+            Already have an account? <a href="login.html">Sign In</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

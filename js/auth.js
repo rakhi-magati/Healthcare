@@ -85,6 +85,7 @@ function initLoginForm() {
   const rememberCheckbox = document.getElementById('rememberMe');
   const authError = document.getElementById('loginAuthError');
 
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -180,15 +181,15 @@ function initRegisterForm() {
         strengthText.style.color = 'var(--text-muted)';
       } else if (score < 2) {
         strengthFill.classList.add('strength-weak');
-        strengthText.textContent = 'Weak password (add numbers/symbols)';
+        strengthText.textContent = getPasswordRequirementMessage();
         strengthText.style.color = 'var(--danger)';
       } else if (score === 2 || score === 3) {
         strengthFill.classList.add('strength-medium');
-        strengthText.textContent = 'Medium password';
+        strengthText.textContent = 'Almost there - add the missing password requirements.';
         strengthText.style.color = 'var(--warning)';
       } else {
         strengthFill.classList.add('strength-strong');
-        strengthText.textContent = 'Strong password';
+        strengthText.textContent = 'Strong password - all requirements met.';
         strengthText.style.color = 'var(--accent)';
       }
     });
@@ -219,9 +220,9 @@ function initRegisterForm() {
       isValid = false;
     }
 
-    // Password
-    if (!passInput.value || passInput.value.length < 6) {
-      showInputError(passInput, 'regPasswordError', 'Password must be at least 6 characters.');
+    // Password: at least 8 characters, one uppercase letter, one number, and one special character.
+    if (!isStrongPassword(passInput.value)) {
+      showInputError(passInput, 'regPasswordError', getPasswordRequirementMessage());
       isValid = false;
     }
 
@@ -265,21 +266,20 @@ function initRegisterForm() {
     storedUsers.push(newUser);
     localStorage.setItem('auracare_users', JSON.stringify(storedUsers));
 
-    // Auto login
-    sessionStorage.setItem('auracare_session', JSON.stringify({
-      name: newUser.name,
-      email: newUser.email,
-      phone: newUser.phone,
-      bloodGroup: newUser.bloodGroup,
-      allergies: newUser.allergies
-    }));
-
-    showToast('Account registered successfully! Redirecting...', 'success', 2500);
+    showToast('Account registered successfully! Please sign in.', 'success', 2500);
 
     setTimeout(() => {
-      window.location.href = 'dashboard.html';
+      window.location.href = 'login.html';
     }, 800);
   });
+}
+
+function isStrongPassword(pass) {
+  return pass.length >= 8 && /[A-Z]/.test(pass) && /[0-9]/.test(pass) && /[^A-Za-z0-9]/.test(pass);
+}
+
+function getPasswordRequirementMessage() {
+  return 'Use at least 8 characters, including one uppercase letter, one number, and one special character.';
 }
 
 function evaluatePasswordStrength(pass) {

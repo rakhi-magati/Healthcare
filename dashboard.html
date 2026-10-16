@@ -3,274 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AuraCare Health - Patient Dashboard. Manage your upcoming consultations, view doctor appointments, and check medical history.">
-  <title>Patient Dashboard | Stackly Health</title>
-
-  <!-- Google Fonts -->
+  <title>Hospital Dashboard | Stackly Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Core & Dashboard Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/dashboard.css">
 </head>
-<body class="dashboard-layout">
+<body class="dx-body">
 
-  <!-- Dashboard Top Navigation -->
-  <header class="dash-header">
-    <div class="dash-nav-container">
-      <div style="display: flex; align-items: center; gap: 32px;">
-        <a href="index.html" class="brand" aria-label="Stackly Health Home">
-        <!-- <div class="brand-text">stackly<span></span></div> -->
-         <img class="logo" src="assets/images/Stackly Logo" alt="Stackly Health">
-      </a>
-        <nav style="display: flex; gap: 8px;">
-          <a href="dashboard.html" class="nav-link active" style="font-size: 0.88rem;">Dashboard</a>
-          <a href="appointments.html" class="nav-link" style="font-size: 0.88rem;">Appointments</a>
-          <a href="doctors.html" class="nav-link" style="font-size: 0.88rem;">Doctor's</a>
-          <a href="index.html" class="nav-link" style="font-size: 0.88rem;">Public Website</a>
-        </nav>
+<aside class="dx-side" id="dxSide">
+  <a href="index.html" class="dx-logo"><img src="assets/images/Stackly Logo" alt="Stackly Health"></a>
+  <nav class="dx-nav">
+    <a href="#dashboard" data-tab="dashboard" class="active"><i>🏠</i>Dashboard</a>
+    <a href="#appointments" data-tab="appointments"><i>📅</i>Appointments</a>
+    <a href="#doctors" data-tab="doctors"><i>🩺</i>Doctors</a>
+    <a href="#departments" data-tab="departments"><i>🏥</i>Departments</a>
+    <a href="#patients" data-tab="patients"><i>🧑‍⚕️</i>Patients</a>
+    <a href="#billing" data-tab="billing"><i>🧾</i>Billing &amp; Insurance</a>
+    <a href="#reports" data-tab="reports"><i>📈</i>Reports</a>
+    <a href="#support" data-tab="support"><i>💬</i>Support</a>
+  </nav>
+  <a href="index.html" class="dx-home" id="backHome"><span>←</span> Back to Home</a>
+  <button class="dx-logout" id="dashLogoutBtn">⎋ Logout</button>
+</aside>
+
+<main class="dx-main">
+  <div class="dx-top">
+    <button class="dx-burger" id="dxBurger" aria-label="Menu">☰</button>
+    <div class="dx-search"><span>🔍</span><input placeholder="Search patients, doctors, wards..."></div>
+    <div class="dx-live"><b class="pulse"></b><span id="dxClock">--:--:--</span></div>
+    <a href="index.html" class="dx-home-top">🏠 Home</a>
+    <div class="dx-avatar" id="dashUserAvatar">P</div>
+  </div>
+
+  <div id="tab-dashboard" class="dx-tab">
+  <h1 class="dx-welcome">Welcome Back, <span id="dashWelcomeName">Guest</span>! <em>👋</em></h1>
+  <p class="dx-sub" id="dxDate"></p>
+
+  <section class="dx-stats">
+    <div class="dx-stat s1"><div><p>Patients Today</p><h2 data-to="248">0</h2><small>▲ 12% vs yesterday</small></div><span>🧑‍🤝‍🧑</span></div>
+    <div class="dx-stat s2"><div><p>Appointments</p><h2 data-to="86">0</h2><small>▲ 8 new this hour</small></div><span>📅</span></div>
+    <div class="dx-stat s3"><div><p>Beds Available</p><h2 data-to="42" id="bedsLive">0</h2><small>of 180 total beds</small></div><span>🛏️</span></div>
+    <div class="dx-stat s4"><div><p>Revenue (Month)</p><h2 data-to="1.8" data-prefix="$" data-suffix="M" data-dec="1">0</h2><small>▲ 18% growth</small></div><span>💰</span></div>
+  </section>
+
+  <section class="dx-grid2" id="dxPatients">
+    <div class="dx-card">
+      <div class="dx-ch"><h3>Patient Admissions Year-To-Date</h3><select><option>2026</option><option>2025</option></select></div>
+      <svg id="lineChart" viewBox="0 0 700 280" preserveAspectRatio="none"></svg>
+    </div>
+    <div class="dx-card">
+      <div class="dx-ch"><h3>Bed Allocation</h3></div>
+      <div class="dx-donutwrap">
+        <svg viewBox="0 0 160 160" id="donut"></svg>
+        <div class="dx-donut-c"><b id="donutTotal">180</b><span>Beds</span></div>
       </div>
+      <ul class="dx-legend"><li><i style="background:#10b981"></i>Occupied <b>112</b></li><li><i style="background:#f59e0b"></i>Cleaning <b>26</b></li><li><i style="background:#ef4444"></i>Critical / ICU <b>42</b></li></ul>
+    </div>
+  </section>
 
-      <div class="dash-user-menu">
-        <button class="dash-notification-btn" aria-label="Notifications" onclick="showToast('You have 1 upcoming consultation reminder for next week.', 'info')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-          <span class="notification-badge-dot"></span>
-        </button>
-
-        <!-- User Pill -->
-        <div class="dash-user-profile" id="btnViewFullProfile" style="cursor: pointer;" title="Click to view full medical profile">
-          <div class="dash-avatar" id="dashUserAvatar">P</div>
-          <div class="dash-user-details">
-            <div class="dash-user-name" id="dashUserName">Patient</div>
-            <div class="dash-user-role">Verified Patient</div>
-          </div>
-        </div>
-
-        <!-- Logout Button -->
-        <button type="button" class="btn-dash-logout" id="dashLogoutBtn" title="End demo session">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-          <span>Logout</span>
-        </button>
+  <section class="dx-grid3">
+    <div class="dx-card">
+      <div class="dx-ch"><h3>Top Departments</h3></div>
+      <div class="dx-bars">
+        <div><p>Cardiology <b>38%</b></p><div class="bar"><span data-w="38"></span></div></div>
+        <div><p>Neurology <b>26%</b></p><div class="bar"><span data-w="26"></span></div></div>
+        <div><p>Pediatrics <b>20%</b></p><div class="bar"><span data-w="20"></span></div></div>
+        <div><p>Orthopedics <b>16%</b></p><div class="bar"><span data-w="16"></span></div></div>
       </div>
     </div>
-  </header>
+    <div class="dx-card" id="dxActivity">
+      <div class="dx-ch"><h3>Live Activity</h3><span class="tag">LIVE</span></div>
+      <ul class="dx-feed" id="feed"></ul>
+    </div>
+    <div class="dx-card" id="dxBilling">
+      <div class="dx-ch"><h3>Upcoming Appointments</h3></div>
+      <ul class="dx-appts">
+        <li><b>Dr. Sarah Chen</b><span>Cardiology · 10:30 AM</span><em class="ok">Confirmed</em></li>
+        <li><b>Dr. Michael Ross</b><span>Neurology · 12:00 PM</span><em class="wait">Pending</em></li>
+        <li><b>Dr. Priya Nair</b><span>Pediatrics · 02:15 PM</span><em class="ok">Confirmed</em></li>
+        <li><b>Dr. James Cole</b><span>Orthopedics · 04:00 PM</span><em class="ok">Confirmed</em></li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Dashboard Main Content Area -->
-  <main class="dash-main-content">
-    
-    <!-- Welcome Header Bar -->
-    <div class="dash-welcome-bar">
-      <div class="dash-welcome-text">
-        <h1>Welcome back, <span id="dashWelcomeName" style="color: var(--primary);">Patient</span>! 👋</h1>
-        <p>Here is your current health overview, scheduled appointments, and clinical activity.</p>
-      </div>
-      <div class="dash-welcome-actions">
-        <a href="appointments.html" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          <span>Book New Appointment</span>
-        </a>
+  <section class="dx-card dx-monitor">
+    <div class="dx-ch"><h3>Live Patient Vitals Monitor</h3><span class="tag">ICU-04</span></div>
+    <div class="dx-mon-row">
+      <canvas id="ecg" height="110"></canvas>
+      <div class="dx-vitals">
+        <div><p>Heart Rate</p><h4><span id="hr">72</span> <small>bpm</small></h4></div>
+        <div><p>SpO₂</p><h4><span id="spo">98</span><small>%</small></h4></div>
+        <div><p>Blood Pressure</p><h4>120/80</h4></div>
       </div>
     </div>
+  </section>
+</div>
+  <div id="tab-other" class="dx-tab" hidden></div>
+</main>
 
-    <!-- 4 Overview Metric Cards -->
-    <div class="dash-metrics-grid">
-      <!-- Total Appointments -->
-      <div class="metric-card">
-        <div class="metric-info">
-          <h3 id="dashTotalAptCount">3</h3>
-          <p>Total Bookings</p>
-        </div>
-        <div class="metric-icon-box teal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        </div>
-      </div>
-
-      <!-- Upcoming Appointments -->
-      <div class="metric-card">
-        <div class="metric-info">
-          <h3 id="dashUpcomingAptCount">2</h3>
-          <p>Upcoming Visits</p>
-        </div>
-        <div class="metric-icon-box blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        </div>
-      </div>
-
-      <!-- Completed Appointments -->
-      <div class="metric-card">
-        <div class="metric-info">
-          <h3 id="dashCompletedAptCount">1</h3>
-          <p>Completed Visits</p>
-        </div>
-        <div class="metric-icon-box green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 108 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-        </div>
-      </div>
-
-      <!-- Health Records on File -->
-      <div class="metric-card">
-        <div class="metric-info">
-          <h3>5</h3>
-          <p>Clinical Records</p>
-        </div>
-        <div class="metric-icon-box amber">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2-Column Dashboard Grid -->
-    <div class="dash-grid-layout">
-      
-      <!-- Left Column: Appointments List -->
-      <div>
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h2 class="dash-card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              <span>Your Appointment History &amp; Schedule</span>
-            </h2>
-            <a href="appointments.html" class="btn btn-outline btn-sm">Schedule New</a>
-          </div>
-
-          <!-- Dynamic List rendered by js/dashboard.js -->
-          <div class="appointment-list" id="dashAppointmentsList">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Demonstration Banner -->
-        <div class="demo-disclaimer" style="margin-top: 0; margin-bottom: 24px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-          <div>
-            <strong>Frontend Simulation Notice:</strong> This dashboard is powered by your local browser session. You can cancel or book visits in real-time, and they will persist locally while testing.
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Patient Profile, Quick Actions & Activity -->
-      <div>
-        
-        <!-- Quick Profile Card -->
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h3 class="dash-card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              <span>Patient Profile</span>
-            </h3>
-            <button type="button" class="btn btn-outline btn-sm" onclick="openProfileModal()">Details</button>
-          </div>
-
-          <div class="patient-profile-card">
-            <div class="patient-info-row">
-              <span>Email:</span>
-              <span id="dashProfileEmail">demo@carepulse.com</span>
-            </div>
-            <div class="patient-info-row">
-              <span>Phone:</span>
-              <span id="dashProfilePhone">+1 (555) 234-5678</span>
-            </div>
-            <div class="patient-info-row">
-              <span>Blood Group:</span>
-              <span id="dashProfileBlood">O+</span>
-            </div>
-            <div class="patient-info-row">
-              <span>Known Allergies:</span>
-              <span id="dashProfileAllergies" style="color: var(--danger);">Penicillin</span>
-            </div>
-            <div class="patient-info-row">
-              <span>Patient Status:</span>
-              <span style="color: var(--accent); font-weight: 700;">Active Regular</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Quick Actions Card -->
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h3 class="dash-card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              <span>Quick Actions</span>
-            </h3>
-          </div>
-
-          <div class="quick-action-list">
-            <a href="appointments.html" class="quick-action-btn">
-              <div class="quick-action-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
-                <span>Book New Appointment</span>
-              </div>
-              <span>→</span>
-            </a>
-
-            <a href="doctors.html" class="quick-action-btn">
-              <div class="quick-action-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                <span>Find a Doctor</span>
-              </div>
-              <span>→</span>
-            </a>
-
-            <button type="button" class="quick-action-btn" onclick="showToast('Digital Health Summary PDF generated (demo download simulated).', 'success')">
-              <div class="quick-action-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Download Health Summary</span>
-              </div>
-              <span>↓</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Recent Clinical Activity -->
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h3 class="dash-card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-              <span>Recent Activity</span>
-            </h3>
-          </div>
-
-          <div class="activity-timeline">
-            <div class="activity-item">
-              <strong>Comprehensive Lipid Panel Uploaded</strong>
-              <span>Clinical Diagnostic Lab • 2 days ago</span>
-            </div>
-            <div class="activity-item">
-              <strong>Annual Wellness Exam Completed</strong>
-              <span>Dr. Oliver Chen • Sep 12, 2026</span>
-            </div>
-            <div class="activity-item">
-              <strong>Prescription Refill Authorized</strong>
-              <span>Pharmacy Concierge • Aug 28, 2026</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Dashboard Footer -->
-  <footer class="dashboard-footer" style="background: white; border-top: 1px solid var(--border-color); padding: 20px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
-    <div class="container">
-      © 2026 AuraCare Health Platform. Patient Portal Demo Session.
-    </div>
-  </footer>
-
-  <!-- Scroll To Top (Up Arrow) Floating Action Button -->
-  <button type="button" class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="19" x2="12" y2="5"></line>
-      <polyline points="5 12 12 5 19 12"></polyline>
-    </svg>
-  </button>
-
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/dashboard.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

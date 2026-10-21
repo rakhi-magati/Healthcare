@@ -22,14 +22,12 @@
   document.body.append(bar, top);
   top.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
   const header = document.querySelector('.site-header');
-  let lastY = 0;
   const onScroll = () => {
     const y = scrollY, max = document.documentElement.scrollHeight - innerHeight, p = max > 0 ? y / max : 0;
     bar.style.width = p * 100 + '%';
     top.querySelector('.fg').style.strokeDashoffset = C * (1 - p);
     top.classList.toggle('show', y > 500);
-    if (header) header.classList.toggle('hide', y > lastY && y > 300);
-    lastY = y;
+    if (header) header.classList.remove('hide');
     const g = document.querySelector('.hero-glow-1');
     if (g && !reduce) g.style.translate = `0 ${y * 0.15}px`;
   };

@@ -300,6 +300,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Top Announcement Bar --- */
 .top-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1300;
   background: linear-gradient(90deg, #07474d, #0b6770, #0369a1);
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.82rem;
@@ -343,9 +347,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Navigation Header --- */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  top: var(--top-bar-height, 36px);
+  z-index: 1200;
+  isolation: isolate;
   background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -2097,6 +2103,9 @@ h1, h2, h3, h4, h5, h6 {
   .top-bar {
     display: none;
   }
+  .site-header {
+    top: 0;
+  }
   .nav-menu {
     display: none;
   }
@@ -2269,3 +2278,67 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* --- Fixed Public Navigation Pair --- */
+body.has-public-navigation {
+  padding-top: calc(var(--top-bar-height, 36px) + var(--site-header-height, var(--header-height)));
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1300;
+}
+
+.site-header {
+  position: fixed;
+  top: var(--top-bar-height, 36px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1200;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    top: 0;
+  }
+
+  .mobile-nav {
+    top: var(--site-header-height, var(--header-height));
+  }
+}
+/* --- Mobile CTA Button Layout --- */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 42px 0 60px;
+  }
+
+  .cta-banner {
+    padding: 42px 24px;
+  }
+
+  .cta-content {
+    gap: 28px;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+
+  .cta-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 20px;
+  }
+}

@@ -19,20 +19,26 @@ function initNavbar() {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.mobile-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
+  const topBar = document.querySelector('.top-bar');
 
-  // Sticky header on scroll
+  const updateNavigationOffsets = () => {
+    const topBarIsVisible = topBar && window.getComputedStyle(topBar).display !== 'none';
+    const topBarHeight = topBarIsVisible ? topBar.offsetHeight : 0;
+    document.documentElement.style.setProperty('--top-bar-height', `${topBarHeight}px`);
+    document.documentElement.style.setProperty('--site-header-height', `${header ? header.offsetHeight : 0}px`);
+  };
+
+  // Keep the public navigation fixed as one two-row header.
   if (header) {
+    document.body.classList.add('has-public-navigation');
     const handleHeaderScroll = () => {
-      if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 20);
+      updateNavigationOffsets();
     };
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    window.addEventListener('resize', updateNavigationOffsets);
     handleHeaderScroll();
   }
-
   // Mobile menu toggle
   if (toggle && mobileNav) {
     const setMobileMenuState = (isOpen) => {
@@ -252,7 +258,7 @@ function initSessionNav() {
 function initFooterSocialLinks() {
   const icons = {
     Facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>',
-    Twitter: '<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>',
+    Twitter: '<path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.636 7.584H.478l8.6-9.83L0 1.153h7.594l5.243 6.932zm-1.291 19.49h2.039L6.486 3.24H4.298z"></path>',
     LinkedIn: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>',
     Instagram: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>'
   };
